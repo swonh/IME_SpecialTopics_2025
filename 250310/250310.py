@@ -1,3 +1,4 @@
+# 최대값 찾기
 def find_max(A):
     max_val = 0
     for i in range(len(A)):
