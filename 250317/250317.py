@@ -5,7 +5,7 @@ import copy
 a = [1,2,[3,4]]
 b = copy.deepcopy(a)
 
-# 2. Deepcopy 모듈 사용하지 않고 구현하는 방법 (예시시)
+# 2. Deepcopy 모듈 사용하지 않고 구현하는 방법 (예시)
 a = [1,2,[3,4]]
 b = []
 
