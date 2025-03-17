@@ -1,11 +1,11 @@
 # 최대값 찾기
+# A = [1, 2, 4, 10, 3]
+# 0 ~ 4 
 def find_max(A):
-    max_val = 0
-    for i in range(len(A)):
-        if max_val < A[i]:
-            max_val = A[i]
-    return max_val
+    max = 0
+    for i in range(A):
+        if max < A[i]:
+            max = A[i]
+    return max
 
-A = [1, 20, 30, 3]
-print(find_max(A))
-
+        
