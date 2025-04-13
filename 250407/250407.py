@@ -30,16 +30,13 @@ def bubble_sort(A):
                 A[j], A[j+1] = A[j+1], A[j]
                 bChanged = True
                 
-        if not bChanged: break;
+        if not bChanged: break
         print(A, n-i)
-            
-        
-
-        
         
 org = [ 5, 3, 8, 4, 9, 1, 6, 2, 7 ]
 
 data = list(org)
+
 # print("Original  :", org)
 # selection_sort(data)
 # print("Selection :", data)
@@ -47,7 +44,6 @@ data = list(org)
 # print("Original  :", org)
 # insertion_sort(data)
 # print("Insertion :", data)
-
 
 print("Original  :", org)
 bubble_sort(data)
