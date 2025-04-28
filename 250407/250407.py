@@ -45,6 +45,14 @@ data = list(org)
 # insertion_sort(data)
 # print("Insertion :", data)
 
+# print("Original  :", org)
+# bubble_sort(data)
+# print("Bubble :", data)
+
+org = [ 5, 3, 8, 4, 9, 1, 6, 2, 7 ]
+
+data = list(org)
+
 print("Original  :", org)
-bubble_sort(data)
-print("Bubble :", data)
+insertion_sort(data)
+print("Selection :", data)
