@@ -1,5 +1,5 @@
 def frac_knapsack(start, remaining_size):
-    """남은 물건들로 계산한 분수 knapsack의 upper bound"""
+    """남은 Item들로 계산한 fractional knapsack의 upper bound"""
     items = [(P[i], S[i], i) for i in range(start, n)]
     items.sort(key=lambda item: item[0] / item[1], reverse=True)
 
@@ -52,7 +52,7 @@ def knapsack(i, size):
         knapsack(i + 1, size)
 
 
-# 물건 정보: (가치 P[i], 무게 S[i])
+# Item 정보: (가치 P[i], 무게 S[i])
 P = [15, 16, 6]
 S = [3, 4, 2]
 n = len(P)
@@ -70,4 +70,4 @@ knapsack(0, capacity)
 
 # 결과 출력
 print("최대 이익:", MP)
-print("선택된 물건 (0/1):", best_x)
+print("선택된 Item (0/1):", best_x)
