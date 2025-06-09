@@ -23,20 +23,21 @@ def s_v():
 
 
 def knapsack(i, size):
+    # 전역변수를 수정하기 위해 global 키워드 사용 (MP, best_x)
     global MP, best_x
 
     if i >= n or size <= 0:
         current_profit = p_v()
         if current_profit > MP:
-            MP = current_profit
-            best_x = x[:]
+            MP = current_profit # MP 값 업데이트
+            best_x = x[:] # 최종 솔루션 도출
         return
 
-    pv = p_v()
+    pv = p_v() # 현재 총 가치 계산
 
     # Case 1: x[i] = 1 (선택함)
     if S[i] <= size:
-        bound = frac_knapsack(i + 1, size - S[i])
+        bound = frac_knapsack(i + 1, size - S[i]) # Fractional knapsack 문제를 풀어 목적함수 값의 상한 계산
         if pv + P[i] + bound > MP:
             if pv + P[i] > MP:
                 MP = pv + P[i]
@@ -51,7 +52,7 @@ def knapsack(i, size):
     if pv + bound > MP:
         knapsack(i + 1, size)
 
-
+# 코드 실행 부분
 # Item 정보: (가치 P[i], 무게 S[i])
 P = [15, 16, 6]
 S = [3, 4, 2]
